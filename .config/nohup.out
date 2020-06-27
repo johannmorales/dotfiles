@@ -1,0 +1,6 @@
+[ 06/27/2020 11:40:06.487 parse_config_libconfig WARN ] Option `no-dock-shadow` is deprecated, and will be removed. Please use the wintype option `shadow` of `dock` instead.
+[ 06/27/2020 11:40:06.487 parse_config_libconfig WARN ] Option `no-dnd-shadow` is deprecated, and will be removed. Please use the wintype option `shadow` of `dnd` instead.
+[ 06/27/2020 11:40:06.487 parse_config_libconfig WARN ] vsync option will take a boolean from now on. "opengl-swc" is interpreted as "true" for compatibility, but this will stop working soon
+[ 06/27/2020 11:40:06.487 parse_config_libconfig WARN ] "clear-shadow" is removed as an option, and is always enabled now. Consider removing it from your config file
+[ 06/27/2020 11:40:06.487 parse_config_libconfig WARN ] "paint-on-overlay" has been removed as an option, and is enabled whenever possible
+[ 06/27/2020 11:40:06.492 session_init FATAL ERROR ] Another composite manager is already running

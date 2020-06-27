@@ -1,0 +1,47 @@
+{
+   "checksum": "3eac5c8a32740344ae368e84079f0626",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13237749893031766",
+            "guid": "982020cd-7fa7-4078-9eae-54d172c9276d",
+            "id": "5",
+            "name": "[i3 gaps] Big Slur : unixporn",
+            "type": "url",
+            "url": "https://www.reddit.com/r/unixporn/comments/hgrpw4/i3_gaps_big_slur/"
+         }, {
+            "date_added": "13237749897089064",
+            "guid": "7060c807-fbff-4bb2-aa02-44c0de58abf5",
+            "id": "6",
+            "name": "dotfiles/config at master · randyaf/dotfiles · GitHub",
+            "type": "url",
+            "url": "https://github.com/randyaf/dotfiles/blob/master/i3/config"
+         } ],
+         "date_added": "13237747941221567",
+         "date_modified": "13237749897089064",
+         "guid": "00000000-0000-4000-a000-000000000002",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13237747941221573",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000003",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13237747941221574",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000004",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
