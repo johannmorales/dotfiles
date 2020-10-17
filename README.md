@@ -7,7 +7,7 @@ Opinionated dotfiles based around
 - Java dev (jenv)
 - Javascript dev (nvm, vscode)
 
-# Getting ArtixLinux
+## Getting ArtixLinux
 https://iso.artixlinux.org/isos.php
 
 ```sh
@@ -17,4 +17,8 @@ diskutil list
 diskutil unmountDisk /dev/diskN
 sudo dd if=/path/to/downloaded.img of=/dev/rdiskN bs=1m
 diskutil eject /dev/diskN
+```
+## Install basic 
+```sh
+pacman -S vim neofetch
 ```
