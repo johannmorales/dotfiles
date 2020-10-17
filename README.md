@@ -9,3 +9,12 @@ Opinionated dotfiles based around
 
 # Getting ArtixLinux
 https://iso.artixlinux.org/isos.php
+
+```sh
+hdiutil convert -format UDRW -o /path/to/target.img /path/to/source.iso
+mv /path/to/target.img.dmg /path/to/target.img
+diskutil list
+diskutil unmountDisk /dev/diskN
+sudo dd if=/path/to/downloaded.img of=/dev/rdiskN bs=1m
+diskutil eject /dev/diskN
+```
