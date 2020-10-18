@@ -24,6 +24,17 @@ diskutil eject /dev/diskN
 pacman -S vim neofetch
 ```
 
+### nvidia 
+Use either `nvida` or `nvida-lts` depending o whether tou chose `linux` or `linux-lts` for kernel
+```sh
+pacman -S <nvidia-package>
+```
+
+### basic display 
+```sh
+pacman -S xorg-server xorg-init i3-gaps
+```
+
 ### Set TTY font 
 Can only use fonts under /usr/share/kbd/consolefonts. Best looking is terminus in my opinion.
 
@@ -36,14 +47,17 @@ pacman -S terminus-font
 Preview font display (this size is preferred for 4k displays)
 
 ```sh
-setfont ter-132n
+setfont ter-112n
 ```
 
 Keep selected font permanently. Edit `/etv/vsconsole.conf`
 
 ```sh
-FONT=ter-132n
+FONT=ter-112n
 ```
 
 ### Google Chrome
+
+```sh
 google-chrome-stable --force-device-scale-factor=1.5
+```
