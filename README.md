@@ -63,5 +63,10 @@ https://ohmyz.sh/
 ### Google Chrome
 
 ```sh
+yay google-chrome-stable
 google-chrome-stable --force-device-scale-factor=1.5
 ```
+
+### fonts
+yay otf-sfmono-patched
+
