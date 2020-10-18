@@ -56,6 +56,10 @@ Keep selected font permanently. Edit `/etv/vsconsole.conf`
 FONT=ter-112n
 ```
 
+
+### Setup Zsh
+https://ohmyz.sh/
+
 ### Google Chrome
 
 ```sh
