@@ -1,6 +1,7 @@
 # Dotfiles
 Opinionated dotfiles based around
 
+- 4k display
 - ArtixLinux
 - i3
 - JetBrains software (intellij, datagrip) 
