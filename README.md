@@ -44,3 +44,6 @@ Keep selected font permanently. Edit `/etv/vsconsole.conf`
 ```sh
 FONT=ter-132n
 ```
+
+### Google Chrome
+google-chrome-stable --force-device-scale-factor=1.5
