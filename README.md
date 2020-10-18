@@ -22,3 +22,24 @@ diskutil eject /dev/diskN
 ```sh
 pacman -S vim neofetch
 ```
+
+### Set TTY font 
+Can only use fonts under /usr/share/kbd/consolefonts. Best looking is terminus in my opinion.
+
+Get terminus font
+
+```sh
+pacman -S terminus-font
+```
+
+Preview font display (this size is preferred for 4k displays)
+
+```sh
+setfont ter-132n
+```
+
+Keep selected font permanently. Edit `/etv/vsconsole.conf`
+
+```sh
+FONT=ter-132n
+```
