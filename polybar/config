@@ -1,0 +1,388 @@
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;;
+;;	    ____        __      __              
+;;	   / __ \____  / /_  __/ /_  ____ ______
+;;	  / /_/ / __ \/ / / / / __ \/ __ `/ ___/
+;;	 / ____/ /_/ / / /_/ / /_/ / /_/ / /    
+;;	/_/    \____/_/\__, /_.___/\__,_/_/     
+;;	              /____/                    
+;;
+;; Created By Aditya Shakya @adi1090x
+;;
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+;; Global WM Settings
+
+[global/wm]
+; Adjust the _NET_WM_STRUT_PARTIAL top value
+; Used for top aligned bars
+margin-bottom = 0
+
+; Adjust the _NET_WM_STRUT_PARTIAL bottom value
+; Used for bottom aligned bars
+margin-top = 0
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+;; Bar Settings
+[bar/main]
+
+monitor =
+monitor-fallback =
+monitor-strict = false
+
+override-redirect = true
+bottom = false
+
+; Prefer fixed center position for the `modules-center` block
+; When false, the center position will be based on the size of the other blocks.
+fixed-center = true
+
+width = 100%:-39
+height = 70
+offset-x = 20
+offset-y = 20
+
+; Background ARGB color (e.g. #f00, #ff992a, #ddff1023)
+background = ${color.alpha}
+foreground = ${color.fg}
+
+radius-top = 0.0
+radius-bottom = 0.0
+
+; Under-/overline pixel size and argb color
+; Individual values can be defined using:
+;   {overline,underline}-size
+;   {overline,underline}-color
+line-size = 2
+line-color = ${color.shade5}
+
+border-top-size = 0
+border-color = ${color.shade5}
+padding = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+; fonts
+font-0 = "SF Pro Display:size=20:weight=medium;3"
+font-1 = "SF Mono:size=30;6"
+font-2 = "SF Mono:size=18;4"
+font-3 = "SF Mono:size=18;4"
+
+modules-left = i3 
+modules-center = 
+modules-right = memory cpu network alsa date
+
+; The separator will be inserted between the output of each module
+separator =
+
+; Opacity value between 0.0 and 1.0 used on fade in/out
+dim-value = 1.0
+
+wm-name = 
+
+locale = en_US.UTF-8 
+
+tray-position = none
+tray-detached = false
+tray-maxsize = 16
+
+; DEPRECATED! Since 3.3.0 the tray always uses pseudo-transparency
+; Enable pseudo transparency
+; Will automatically be enabled if a fully transparent
+; background color is defined using `tray-background`
+tray-transparent = true
+
+tray-background = ${root.background}
+
+; Tray offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
+tray-offset-x = 0
+tray-offset-y = 0
+
+; Pad the sides of each tray icon
+tray-padding = 0
+
+; Scale factor for tray clients
+tray-scale = 1.0
+; Restack the bar window and put it above the
+; selected window manager's root
+;
+; Fixes the issue where the bar is being drawn
+; on top of fullscreen window's
+;
+; Currently supported WM's:
+;   bspwm
+;   i3 (requires: `override-redirect = true`)
+wm-restack = i3
+
+; Enable support for inter-process messaging
+; See the Messaging wiki page for more details.
+enable-ipc = true
+
+; Fallback click handlers that will be called if
+; there's no matching module handler found.
+click-left = 
+click-middle = 
+click-right =
+scroll-up =
+scroll-down =
+double-click-left =
+double-click-middle =
+double-click-right =
+
+; Requires polybar to be built with xcursor support (xcb-util-cursor)
+; Possible values are:
+; - default   : The default pointer as before, can also be an empty string (default)
+; - pointer   : Typically in the form of a hand
+; - ns-resize : Up and down arrows, can be used to indicate scrolling
+cursor-click = 
+cursor-scroll = 
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+;; Application Settings
+
+[settings]
+throttle-output = 5
+throttle-output-for = 10
+
+; Time in milliseconds that the input handler will wait between processing events
+throttle-input-for = 30
+
+; Reload upon receiving XCB_RANDR_SCREEN_CHANGE_NOTIFY events
+screenchange-reload = false
+
+; Compositing operators
+; @see: https://www.cairographics.org/manual/cairo-cairo-t.html#cairo-operator-t
+compositing-background = source
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+; Define fallback values used by all module formats
+format-foreground = 
+format-background = 
+format-underline =
+format-overline =
+format-spacing =
+format-padding =
+format-margin =
+format-offset =
+
+; Enables pseudo-transparency for the bar
+; If set to true the bar can be transparent without a compositor.
+pseudo-transparency = true
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;;
+;;	   ______      __               
+;;	  / ____/___  / /___  __________
+;;	 / /   / __ \/ / __ \/ ___/ ___/
+;;	/ /___/ /_/ / / /_/ / /  (__  ) 
+;;	\____/\____/_/\____/_/  /____/  
+;;
+;; Created By Aditya Shakya @adi1090x
+;;
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[color]
+
+bg = ${xrdb:background:#222}
+fg = ${xrdb:foreground:#222}
+fg-alt = #141C21
+
+alpha = #00000000
+
+shade1 = #AFB42B
+shade2 = #C0CA33
+shade3 = #CDDC39
+shade4 = #D4E157
+shade5 = #DCE775
+shade6 = #E6EE9C
+
+; Modules
+
+[module/alsa]
+type = internal/alsa
+
+format-volume = <ramp-volume> <label-volume>
+format-volume-background = ${color.alpha}
+format-volume-foreground = ${color.fg}
+format-volume-padding = 4
+
+label-volume =  "%percentage%% "     
+label-volume-font = 3
+
+format-muted-prefix = "%{T3}ﱝ %{T-}"
+format-muted-background = ${color.alpha}
+format-muted-foreground = ${color.fg}
+format-muted-padding = 4
+label-muted = "Muted "
+
+ramp-volume-0 = %{T3}奔%{T-}
+ramp-volume-1 = %{T3}墳%{T-}
+
+ramp-headphones-0 = %{T3}奔%{T-}
+ramp-headphones-1 = %{T3}墳%{T-} 
+
+
+[module/cpu]
+type = internal/cpu
+
+interval = 0.5
+
+format = <label>
+format-prefix = %{T3}﬙%{T-}
+format-background = ${color.alpha}
+format-foreground = ${color.fg}
+format-padding = 4
+
+label = " %percentage%%"
+label-font = 4
+
+[module/date]
+type = internal/date
+
+interval = 1.0
+
+time = %I:%M %p
+time-alt =  %Y-%m-%d%
+
+format = <label>
+format-background = ${color.bg}
+format-foreground = ${color.fg}
+format-padding = 4
+
+label = %time%
+
+
+[module/memory]
+type = internal/memory
+
+interval = 3
+
+format = <label>
+format-prefix = %{T3}%{T-}
+format-background = ${color.alpha}
+format-foreground = ${color.fg}
+format-padding = 4
+
+label = " %mb_used%"
+label-font = 3
+
+
+[module/network]
+type = internal/network
+interface = eno1
+
+interval = 100.0
+accumulate-stats = true
+unknown-as-up = true
+
+format-connected = %{T3}ﯱ%{T-}   <label-connected>
+format-connected-background = ${color.alpha}
+format-connected-foreground = ${color.fg}
+format-connected-padding = 4
+
+format-disconnected = %{T3}%{T-} <label-disconnected>
+format-disconnected-background = ${color.bg}
+format-disconnected-foreground = ${color.fg}
+format-disconnected-padding = 4
+
+label-connected = %local_ip%
+label-connected-font = 3
+
+label-disconnected = Disconnected
+label-disconnected-font = 3
+
+[module/i3]
+; {{{
+label-active-font = 2
+type = internal/i3
+;pin-workspaces = true
+strip-wsnumbers = false
+format = <label-state> <label-mode>
+index-sort = true
+
+label-mode = %mode%
+label-mode-padding = 1
+label-mode-background = ${color.bg}
+
+;label-focused = %index%
+label-focused = %icon%
+;label-focused-background = #ee333333
+label-focused-background = ${color.bg}
+label-focused-foreground = ${color.fg}
+label-focused-padding = 5
+
+;label-unfocused = %index%
+label-unfocused = %icon%
+label-unfocused-padding = 5
+
+;label-urgent = %index%!
+label-urgent = %name%!
+;label-urgent-background = #bd2c40
+label-urgent-padding = 2
+label-urgent-background = ${color.fg}
+label-urgent-foreground = ${color.fg}
+
+;label-visible = %index%
+label-visible = %name%
+label-visible-foreground = #55
+label-visible-padding = 2
+
+;ws-icon-[0-9]+= label:icon
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 0;
+;ws-icon-default = 
+
+; }}}
+
+
+[module/workspaces]
+type = internal/xworkspaces
+
+;pin-workspaces = true
+
+enable-click = true
+enable-scroll = true
+
+format = <label-state>
+index-sort = true
+format-padding = 0
+
+label-monitor = %name%
+
+label-active = %name%
+label-active-foreground = ${color.bg}
+label-active-background = ${color.fg}
+
+label-occupied = %icon%
+label-occupied-underline = ${color.fg}
+
+label-urgent = %icon%
+label-urgent-foreground = ${color.bg}
+label-urgent-background = ${color.fg}
+
+label-empty = %name%
+label-empty-background = ${color.bg}
+label-empty-foreground = ${color.fg}
+
+label-active-padding = 1
+label-urgent-padding = 1
+label-occupied-padding = 1
+label-empty-padding = 1
+
+
+;In stead of bindsym F1 workspace 1 say bindsym F1 workspace $workspace1

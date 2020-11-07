@@ -47,7 +47,7 @@ pacman -S terminus-font
 Preview font display (this size is preferred for 4k displays)
 
 ```sh
-setfont ter-112n
+setfont ter-132n
 ```
 
 Keep selected font permanently. Edit `/etv/vsconsole.conf`
