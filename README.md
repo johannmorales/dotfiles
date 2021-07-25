@@ -32,6 +32,8 @@ yay polybar
 yay python-pywal
 yay feh
 yay -S picom-ibhagwan-git
+pacman -S pulseaudio
+pacman -S pavucontrol
 ```
 
 ### nvidia 
