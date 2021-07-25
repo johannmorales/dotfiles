@@ -38,10 +38,10 @@ bottom = false
 ; When false, the center position will be based on the size of the other blocks.
 fixed-center = true
 
-width = 100%:-39
-height = 70
-offset-x = 20
-offset-y = 20
+width = 100%:-22
+height = 45
+offset-x = 11
+offset-y = 11
 
 ; Background ARGB color (e.g. #f00, #ff992a, #ddff1023)
 background = ${color.alpha}
@@ -65,10 +65,12 @@ module-margin-left = 0
 module-margin-right = 0
 
 ; fonts
-font-0 = "SF Pro Display:size=20:weight=medium;3"
-font-1 = "SF Mono:size=30;6"
-font-2 = "SF Mono:size=18;4"
-font-3 = "SF Mono:size=18;4"
+; sans
+font-0 = "SF Pro Display:size=12:weight=medium;3"
+; icons left
+font-1 = "SF Mono:size=20;6"
+; text mono
+font-2 = "SF Mono:size=12;4"
 
 modules-left = i3 
 modules-center = 
@@ -214,7 +216,7 @@ format-volume-foreground = ${color.fg}
 format-volume-padding = 4
 
 label-volume =  "%percentage%% "     
-label-volume-font = 3
+label-volume-font = 1
 
 format-muted-prefix = "%{T3}ﱝ %{T-}"
 format-muted-background = ${color.alpha}
@@ -241,7 +243,7 @@ format-foreground = ${color.fg}
 format-padding = 4
 
 label = " %percentage%%"
-label-font = 4
+label-font = 3
 
 [module/date]
 type = internal/date
